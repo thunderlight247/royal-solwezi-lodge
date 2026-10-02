@@ -7,5 +7,5 @@ export default async function Contact({ searchParams }: { searchParams: Promise<
   const { room } = await searchParams;
   return (<><PageHero title="Reserve / Enquire" intro="Fill in your details and we will prepare a WhatsApp message for you to send." />
     <Section><div className="mx-auto max-w-3xl"><EnquiryForm defaultRoom={room ?? ""} />
-      <p className="mt-6 text-sm">{business.phone && <>Call: <a className="underline" href={`tel:${business.phone}`}>{business.phone}</a> · </>}{business.backupPhone && <>Alt: <a className="underline" href={`tel:${business.backupPhone}`}>{business.backupPhone}</a> · </>}{business.email && <>Email: <a className="underline" href={`mailto:${business.email}`}>{business.email}</a></>}</p></div></Section></>);
+      <p className="mt-6 text-sm">{business.phone && <>Call: <a className="underline" href={`tel:${business.phone}`}>{business.phone}</a> · </>}{business.email && <>Email: <a className="underline" href={`mailto:${business.email}`}>{business.email}</a></>}</p></div></Section></>);
 }

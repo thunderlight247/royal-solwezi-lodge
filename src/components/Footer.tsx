@@ -15,7 +15,6 @@ export default function Footer() {
         <div className="text-sm"><p className="font-semibold text-white">Contact</p>
           <ul className="mt-2 space-y-1">
             {business.phone && <li><a href={`tel:${business.phone}`}>{business.phone}</a></li>}
-            {business.backupPhone && <li><a href={`tel:${business.backupPhone}`}>{business.backupPhone}</a></li>}
             {business.email && <li><a href={`mailto:${business.email}`}>{business.email}</a></li>}
             <li><Link href="/contact" className="hover:text-gold">Enquire on WhatsApp</Link></li>
             <li><a href={business.googleMapsUrl} target="_blank" rel="noopener noreferrer" className="hover:text-gold">Open in Google Maps</a></li>

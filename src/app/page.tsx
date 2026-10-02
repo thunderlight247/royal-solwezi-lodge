@@ -8,8 +8,9 @@ import { Section } from "@/components/Section";
 export default function Home() {
   return (<>
     <section className="relative isolate flex min-h-[78vh] items-end text-white">
-      <Image src="/images/courtyard.jpg" alt="Royal Solwezi Lodge courtyard with gazebo and thatched pavilion" fill priority sizes="100vw" className="-z-10 object-cover" />
-      <div className="absolute inset-0 -z-10 bg-gradient-to-t from-forest-dark/90 via-forest-dark/40 to-black/10" />
+      <Image src="/images/hero-exterior.jpg" alt="Two-storey Royal Solwezi Lodge building" fill priority unoptimized sizes="100vw" className="-z-10 object-cover object-[center_58%] brightness-110 saturate-110" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-t from-forest-dark/75 via-forest-dark/10 to-transparent" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-forest-dark/40 via-forest-dark/10 to-transparent" />
       <div className="mx-auto w-full max-w-6xl px-4 pb-16">
         <p className="text-sm uppercase tracking-widest text-gold">Agona Swedru, Ghana</p>
         <h1 className="mt-2 font-serif text-5xl leading-tight md:text-7xl">Royal Solwezi Lodge</h1>
@@ -23,7 +24,7 @@ export default function Home() {
     <Section title="Welcome to the lodge">
       <div className="grid items-center gap-8 md:grid-cols-2">
         <p className="text-lg leading-relaxed">Royal Solwezi Lodge sits on the {business.location.street} in {business.location.city}, in Ghana&apos;s {business.location.region}. Guests find a quiet compound, 15 air-conditioned rooms, a welcoming reception and open-air spaces to unwind. Send us a message on WhatsApp and we will help you plan your stay.</p>
-        <div className="relative aspect-[4/3] overflow-hidden rounded-2xl"><Image src="/images/hero-exterior.jpg" alt="Two-storey Royal Solwezi Lodge building" fill sizes="(min-width:768px) 50vw, 100vw" className="object-cover" /></div>
+        <div className="relative aspect-[4/3] overflow-hidden rounded-2xl"><Image src="/images/courtyard.jpg" alt="Royal Solwezi Lodge courtyard with gazebo and thatched pavilion" fill sizes="(min-width:768px) 50vw, 100vw" className="object-cover" /></div>
       </div>
     </Section>
     <Section title="Rooms & accommodation">

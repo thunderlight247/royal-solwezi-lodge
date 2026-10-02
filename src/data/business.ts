@@ -11,9 +11,8 @@ export const business = {
     // geo: { lat: 0, lng: 0 }  // add ONLY after verifying on Google Maps
   },
   whatsapp: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "+233530470113", // client-provided
-  phone: process.env.NEXT_PUBLIC_PHONE || "+233248380011", // client-provided
-  backupPhone: "+233530470113", // client-provided
-  email: process.env.NEXT_PUBLIC_EMAIL || "officialsolwezyguesthouse@gmail.com", // client-provided
+  phone: "+233530470113",
+  email: "royalsolwezilodge@gmail.com",
   // No coordinates: the embed uses a text search query.
   googleMapsUrl: "https://share.google/7PYqCsIbSYz3xv1Vv", // client-provided Google listing share link
   googleMapsEmbed: "https://www.google.com/maps?q=Royal+Solwezi+Lodge+Agona+Swedru+Ghana&output=embed",
