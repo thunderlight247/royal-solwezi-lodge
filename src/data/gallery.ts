@@ -1,10 +1,12 @@
+import { media } from "./media";
+const g = media.gallery;
 export const gallery = [
-  { cat: "Exterior", src: "/images/hero-exterior.jpg", alt: "Two-storey Royal Solwezi Lodge building in Agona Swedru" },
-  { cat: "Exterior", src: "/images/courtyard.jpg", alt: "Courtyard with gazebo and thatched pavilion at Royal Solwezi Lodge" },
-  { cat: "Rooms", src: "/images/room-bed.jpg", alt: "Guest room with a large bed" },
-  { cat: "Rooms", src: "/images/room-bath.jpg", alt: "Guest bathroom with bath" },
-  { cat: "Common spaces", src: "/images/reception.jpg", alt: "Reception and lounge area" },
-  { cat: "Common spaces", src: "/images/staircase.jpg", alt: "Staircase and corridor with evening lighting" },
-  { cat: "Outdoor", src: "/images/gazebo.jpg", alt: "Garden gazebo with wrought-iron railings" },
-  { cat: "Outdoor", src: "/images/pavilion.jpg", alt: "Thatched open-air pavilion with seating" },
+  { cat: "Exterior", src: g[0], alt: "Lodge exterior and grounds" },
+  { cat: "Rooms", src: g[1], alt: "Guest room with a large bed" },
+  { cat: "Rooms", src: g[2], alt: "Suite living area" },
+  { cat: "Common spaces", src: g[3], alt: "Reception and lounge area" },
+  { cat: "Common spaces", src: g[4], alt: "Hotel corridor and staircase" },
+  { cat: "Rooms", src: g[5], alt: "Guest bathroom" },
+  { cat: "Outdoor", src: g[6], alt: "Garden and relaxation area" },
+  { cat: "Outdoor", src: g[7], alt: "Open-air pavilion dining" },
 ];

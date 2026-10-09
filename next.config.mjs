@@ -1,2 +1,7 @@
 /** @type {import('next').NextConfig} */
-export default { images: { formats: ["image/avif", "image/webp"] } };
+export default {
+  images: {
+    formats: ["image/avif", "image/webp"],
+    remotePatterns: [{ protocol: "https", hostname: "images.unsplash.com" }],
+  },
+};

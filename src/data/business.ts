@@ -10,9 +10,10 @@ export const business = {
     countryCode: "GH",
     // geo: { lat: 0, lng: 0 }  // add ONLY after verifying on Google Maps
   },
-  whatsapp: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "+233530470113", // client-provided
-  phone: "+233530470113",
-  email: "royalsolwezilodge@gmail.com",
+  whatsapp: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "+233530470113",
+  phone: process.env.NEXT_PUBLIC_PHONE || "",
+  backupPhone: "+233530470113", // client-provided
+  email: process.env.NEXT_PUBLIC_EMAIL || "royalsolwezilodge@gmail.com",
   // No coordinates: the embed uses a text search query.
   googleMapsUrl: "https://share.google/7PYqCsIbSYz3xv1Vv", // client-provided Google listing share link
   googleMapsEmbed: "https://www.google.com/maps?q=Royal+Solwezi+Lodge+Agona+Swedru+Ghana&output=embed",
@@ -23,10 +24,10 @@ export const business = {
 };
 export const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://royal-solwezi-lodge.vercel.app";
 export const nav = [
+  { href: "/", label: "Home" },
   { href: "/rooms", label: "Rooms" },
+  { href: "/menu", label: "Menu" },
   { href: "/amenities", label: "Amenities" },
   { href: "/gallery", label: "Gallery" },
-  { href: "/about", label: "About" },
-  { href: "/location", label: "Location" },
   { href: "/contact", label: "Contact" },
 ];

@@ -1,9 +1,10 @@
 import { business, siteUrl } from "@/data/business";
+import { media } from "@/data/media";
 export default function JsonLd() {
   const l = business.location;
   const data: Record<string, unknown> = {
     "@context": "https://schema.org", "@type": ["LodgingBusiness", "LocalBusiness"],
-    name: business.name, url: siteUrl, image: `${siteUrl}/images/hero-exterior.jpg`, logo: `${siteUrl}/images/logo.jpg`,
+    name: business.name, url: siteUrl, image: media.hero, logo: `${siteUrl}/logo.jpg`,
     address: { "@type": "PostalAddress", streetAddress: l.street, addressLocality: l.city, addressRegion: l.region, addressCountry: l.countryCode },
     hasMap: business.googleMapsUrl,
   };

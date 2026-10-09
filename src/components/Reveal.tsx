@@ -1,11 +1,8 @@
 "use client";
-import { useEffect, useRef } from "react";
-export default function Reveal({ children, className = "" }: { children: React.ReactNode; className?: string }) {
-  const ref = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    const el = ref.current; if (!el) return;
-    const io = new IntersectionObserver(([e]) => { if (e.isIntersecting) { el.classList.add("in"); io.disconnect(); } }, { threshold: 0.12 });
-    io.observe(el); return () => io.disconnect();
-  }, []);
-  return <div ref={ref} className={`reveal ${className}`}>{children}</div>;
+import { motion, useReducedMotion } from "framer-motion";
+export default function Reveal({ children, className = "", delay = 0 }: { children: React.ReactNode; className?: string; delay?: number }) {
+  const reduce = useReducedMotion();
+  return (
+    <motion.div className={className} initial={reduce ? false : { opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.15 }}
+      transition={reduce ? { duration: 0 } : { duration: 0.65, ease: [0.22, 1, 0.36, 1], delay }}>{children}</motion.div>);
 }
