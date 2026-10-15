@@ -1,15 +1,30 @@
-@tailwind base; @tailwind components; @tailwind utilities;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html { scroll-behavior: smooth; }
 body { @apply bg-cream text-ink font-sans antialiased; }
 h1, h2, h3, h4 { @apply font-serif text-forest; }
+
+::selection { background: #fdb41340; color: #073d07; }
+
 :focus-visible { outline: 3px solid #E0A100; outline-offset: 2px; }
-.card { @apply rounded-xl border border-[#e8e7e3] bg-white shadow-sm; }
+
+.card { @apply rounded-2xl border border-line bg-white shadow-sm; }
+
 .btn { @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md active:translate-y-0 active:shadow-sm; }
 .btn-gold { @apply bg-gold text-forest-dark hover:bg-gold-deep hover:text-white; }
 .btn-line { @apply border border-white/70 text-white hover:bg-white hover:text-forest-dark; }
 .btn-green { @apply bg-forest text-white hover:bg-forest-dark; }
 .btn-outline { @apply border border-forest/30 text-forest hover:bg-forest hover:text-white; }
-.field { @apply mt-1 w-full rounded-xl border border-[#EFECE6] bg-cream px-3 py-2.5 text-forest; }
+.btn-sm { @apply px-4 py-2 text-xs; }
+
+.field { @apply mt-1 w-full rounded-xl border border-line bg-cream px-3 py-2.5 text-forest transition-colors focus:border-gold focus:outline-none focus:ring-1 focus:ring-gold/40; }
+
+/* Decorative section divider */
+.section-divider { @apply my-1 flex items-center justify-center gap-3 text-gold; }
+.section-divider::before, .section-divider::after { content: ""; @apply block h-px w-12 bg-gold/40; }
+
 @media (prefers-reduced-motion: reduce) {
 	html { scroll-behavior: auto; }
 	*, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; }

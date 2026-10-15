@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
+import FloatingActions from "@/components/FloatingActions";
 import { business, siteUrl } from "@/data/business";
 import { media } from "@/data/media";
 const serif = Playfair_Display({ subsets: ["latin"], variable: "--font-serif" });
@@ -19,7 +20,17 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${serif.variable} ${sans.variable}`}>
-      <body><a href="#main" className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:bg-white focus:p-3">Skip to content</a>
-        <Header /><main id="main">{children}</main><Footer /><JsonLd /></body>
-    </html>);
+      <body>
+        <a href="#main" className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:bg-white focus:p-3">
+          Skip to content
+        </a>
+        <Header />
+        <main id="main">{children}</main>
+        <Footer />
+        <FloatingActions />
+        <JsonLd />
+      </body>
+    </html>
+  );
 }
+

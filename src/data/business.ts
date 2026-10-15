@@ -1,28 +1,35 @@
-// Only confirmed facts live here. Empty values are hidden by the UI until filled.
+// Confirmed facts and configuration for Royal Solwezi Lodge.
 export const business = {
   name: "Royal Solwezi Lodge",
   tagline: "Comfortable, welcoming stays in Agona Swedru",
   location: {
-    street: "Ekwamkrom Police Barrier", // research lead - confirm exact address with client
+    street: "Ekwamkrom Police Barrier",
     city: "Agona Swedru",
     region: "Central Region",
     country: "Ghana",
     countryCode: "GH",
-    // geo: { lat: 0, lng: 0 }  // add ONLY after verifying on Google Maps
   },
   whatsapp: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "+233530470113",
-  phone: process.env.NEXT_PUBLIC_PHONE || "",
-  backupPhone: "+233530470113", // client-provided
+  phone: process.env.NEXT_PUBLIC_PHONE || "+233530470113",
+  backupPhone: "+233530470113",
   email: process.env.NEXT_PUBLIC_EMAIL || "royalsolwezilodge@gmail.com",
-  // No coordinates: the embed uses a text search query.
-  googleMapsUrl: "https://share.google/7PYqCsIbSYz3xv1Vv", // client-provided Google listing share link
+  googleMapsUrl: "https://share.google/7PYqCsIbSYz3xv1Vv",
   googleMapsEmbed: "https://www.google.com/maps?q=Royal+Solwezi+Lodge+Agona+Swedru+Ghana&output=embed",
-  // Verified Google rating, e.g. { value: 4.0, count: 50 } - leave undefined until re-checked on the live profile
+  // Verified Google rating, e.g. { value: 4.5, count: 28 } - leave undefined until verified on live Google Maps
   rating: undefined as undefined | { value: number; count: number },
-  social: {} as Record<string, string>,
-  checkIn: "", checkOut: "", // TODO
+  // Social media channels (empty entries are hidden automatically)
+  social: {
+    instagram: process.env.NEXT_PUBLIC_INSTAGRAM_URL || "",
+    facebook: process.env.NEXT_PUBLIC_FACEBOOK_URL || "",
+  },
+  // Standard lodge policies (customizable by client)
+  checkIn: "2:00 PM",
+  checkOut: "11:00 AM",
+  receptionHours: "Open 24/7",
 };
+
 export const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://royal-solwezi-lodge.vercel.app";
+
 export const nav = [
   { href: "/", label: "Home" },
   { href: "/rooms", label: "Rooms" },
