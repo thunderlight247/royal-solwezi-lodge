@@ -62,7 +62,7 @@ export default function ContactPage() {
                     </a>
                   </p>
                 )}
-                {business.backupPhone && (
+                {business.backupPhone && business.backupPhone !== business.phone && (
                   <p>
                     <a href={`tel:${business.backupPhone}`} className="hover:text-gold-deep">
                       {business.backupPhone}
@@ -72,7 +72,7 @@ export default function ContactPage() {
               </div>
             </div>
             <a
-              href={`tel:${business.backupPhone || business.phone}`}
+              href={`tel:${business.phone || business.backupPhone}`}
               className="btn btn-outline btn-sm mt-5 w-full text-xs"
             >
               Call Front Desk

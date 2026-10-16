@@ -16,10 +16,10 @@ export default function Hero() {
       <SafeImage src={media.hero} alt="Royal Solwezi Lodge, a serene lodge in Agona Swedru" sizes="100vw" priority className="-z-10 object-cover" />
 
       {/* Multi-stop gradient for better text legibility */}
-      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-black/25 via-black/10 to-black/70 md:bg-gradient-to-t md:from-black/75 md:via-black/25 md:to-black/15" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-black/30 via-black/15 to-black/75 md:bg-gradient-to-t md:from-black/80 md:via-black/30 md:to-black/15" />
 
       {/* Subtle vignette on sides */}
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,transparent_50%,rgba(0,0,0,0.3)_100%)]" />
+      <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,transparent_50%,rgba(0,0,0,0.35)_100%)]" />
 
       <motion.div
         variants={box}
@@ -32,23 +32,24 @@ export default function Hero() {
         </motion.p>
 
         <motion.h1 variants={item} className="mx-auto mt-5 max-w-3xl font-serif text-4xl leading-[1.06] text-white drop-shadow-sm md:mx-0 md:text-6xl lg:text-7xl">
-          Serene Lodging &amp; Open-Air Pavilion Dining
+          Serene Lodging, Summer Hut &amp; Pavilion Dining
         </motion.h1>
 
         <motion.p variants={item} className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-white/90 drop-shadow-sm md:mx-0 md:text-lg">
-          Rest well, eat well and enjoy the open air at Royal Solwezi Lodge &amp; Restaurant.
+          Seventeen comfortable rooms (Executive, Luxury &amp; Standard), authentic Ghanaian cuisine, conference room for 30–40, laundry service, and a relaxing summer hut.
         </motion.p>
 
         <motion.div variants={item} className="mt-8 flex flex-wrap justify-center gap-3 md:justify-start">
-          <Link href="/book" className="btn btn-gold shadow-lg shadow-gold/20">Book Your Stay</Link>
-          <Link href="/menu" className="btn btn-line">Explore the Menu</Link>
+          <Link href="/book" className="btn btn-gold shadow-lg shadow-gold/20">Reserve Your Room</Link>
+          <Link href="/menu" className="btn btn-line">Explore Ghanaian Menu</Link>
         </motion.div>
 
         {/* Trust signals */}
         <motion.div variants={item} className="mt-10 flex flex-wrap justify-center gap-x-8 gap-y-3 text-sm text-white/75 md:justify-start">
           {[
-            ["3", "Room Tiers"],
-            ["4", "Dining Categories"],
+            ["17", "Guest Rooms"],
+            ["3", "Categories (AC & Fan)"],
+            ["30–40", "Conference Hall"],
             ["📍", "Agona Swedru"],
           ].map(([value, label]) => (
             <div key={label} className="flex items-center gap-2">

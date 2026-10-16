@@ -13,12 +13,12 @@ export default function MenuSection() {
   return (
     <section className="mx-auto max-w-6xl px-4 py-16" id="menu">
       <SectionHeader
-        tag="Pavilion Menu"
-        title="Food &amp; Drink"
-        intro="Order by WhatsApp and we'll confirm availability and timing."
+        tag="Pavilion Kitchen &amp; Bar"
+        title="Authentic Ghanaian Cuisine &amp; Drinks"
+        intro="Order directly via WhatsApp from our kitchen and bar. We serve authentic local Ghanaian dishes, charcoal grills, and cold beverages."
       />
 
-      {/* Category tabs — larger & more tappable */}
+      {/* Category tabs */}
       <div
         role="tablist"
         aria-label="Menu categories"
@@ -55,7 +55,10 @@ export default function MenuSection() {
           {dishes
             .filter((d) => d.category === cat)
             .map((d) => (
-              <li key={d.id} className="card group flex flex-col overflow-hidden transition-shadow duration-300 hover:shadow-xl">
+              <li
+                key={d.id}
+                className="card group flex flex-col overflow-hidden transition-shadow duration-300 hover:shadow-xl"
+              >
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <SafeImage
                     src={d.image}
@@ -63,13 +66,9 @@ export default function MenuSection() {
                     sizes="(min-width:1024px) 25vw, (min-width:640px) 50vw, 100vw"
                     className="object-cover transition-transform duration-500 group-hover:scale-[1.04]"
                   />
-                  {/* Price badge */}
-                  <span className="absolute right-2.5 top-2.5 rounded-lg bg-gold px-2.5 py-1 text-sm font-bold text-forest-dark shadow">
-                    GH₵ {d.price}
-                  </span>
                   {/* Chef's Special chip */}
                   {d.chips.includes("Chef's Special") && (
-                    <span className="absolute left-2.5 top-2.5 flex items-center gap-1 rounded-full bg-forest/90 px-2.5 py-1 text-xs font-semibold text-white backdrop-blur-sm">
+                    <span className="absolute left-2.5 top-2.5 flex items-center gap-1 rounded-full bg-forest/90 px-2.5 py-1 text-xs font-semibold text-white backdrop-blur-sm shadow">
                       <ChefHat size={11} />
                       Chef&apos;s Special
                     </span>
@@ -84,7 +83,7 @@ export default function MenuSection() {
                   {d.chips.includes("Local") && (
                     <div className="mt-2.5">
                       <span className="rounded-full bg-tint px-2.5 py-0.5 text-xs font-medium text-gold-deep">
-                        🇬🇭 Local Dish
+                        🇬🇭 Local Specialty
                       </span>
                     </div>
                   )}

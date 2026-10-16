@@ -1,12 +1,14 @@
 import { media } from "./media";
+
 const g = media.gallery;
+
 export const gallery = [
-  { cat: "Exterior", src: g[0], alt: "Lodge exterior and grounds" },
-  { cat: "Rooms", src: g[1], alt: "Guest room with a large bed" },
-  { cat: "Rooms", src: g[2], alt: "Suite living area" },
-  { cat: "Common spaces", src: g[3], alt: "Reception and lounge area" },
-  { cat: "Common spaces", src: g[4], alt: "Hotel corridor and staircase" },
-  { cat: "Rooms", src: g[5], alt: "Guest bathroom" },
-  { cat: "Outdoor", src: g[6], alt: "Garden and relaxation area" },
-  { cat: "Outdoor", src: g[7], alt: "Open-air pavilion dining" },
+  { cat: "Compound", src: g[0], alt: "Lodge gated compound and entrance" },
+  { cat: "Summer Hut", src: g[1], alt: "Summer hut open-air resting area" },
+  { cat: "Pavilion & Bar", src: g[2], alt: "Open-air pavilion dining and relaxation" },
+  { cat: "Conference & Events", src: g[3], alt: "Air-conditioned conference room for 30-40 attendees" },
+  { cat: "Rooms", src: g[4], alt: "Executive Room with air conditioning" },
+  { cat: "Rooms", src: g[5], alt: "Luxury Room with air conditioning and seating" },
+  { cat: "Rooms", src: g[6], alt: "Standard Room with ceiling fan cooling" },
+  { cat: "Pavilion & Bar", src: g[7], alt: "Lodge bar and kitchen counter" },
 ];

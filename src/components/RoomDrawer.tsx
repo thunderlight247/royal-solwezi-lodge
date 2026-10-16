@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { X, BedDouble, Check, ChevronLeft, ChevronRight, Maximize, Users, MessageCircle } from "lucide-react";
+import { X, BedDouble, Check, ChevronLeft, ChevronRight, Users, Snowflake, Fan, MessageCircle } from "lucide-react";
 import SafeImage from "./SafeImage";
 import { getIcon } from "./icons";
 import type { Room } from "@/data/rooms";
@@ -73,9 +73,17 @@ export default function RoomDrawer({ room, onClose }: { room: Room | null; onClo
               <X size={18} />
             </button>
 
-            {/* Price badge */}
-            <span className="absolute left-3 top-3 rounded-lg bg-gold px-3 py-1.5 text-sm font-bold text-forest-dark shadow-md">
-              GH₵ {room.pricePerNight}<span className="text-xs font-medium">/night</span>
+            {/* Cooling badge */}
+            <span className="absolute left-3 top-3 rounded-full bg-forest/90 px-3 py-1.5 text-xs font-semibold text-white shadow-md backdrop-blur-sm flex items-center gap-1.5">
+              {room.specs.cooling === "Air Conditioning" ? (
+                <>
+                  <Snowflake size={14} className="text-gold" /> Air Conditioned
+                </>
+              ) : (
+                <>
+                  <Fan size={14} className="text-gold" /> Fan Cooled
+                </>
+              )}
             </span>
 
             {/* Carousel controls */}
@@ -118,17 +126,25 @@ export default function RoomDrawer({ room, onClose }: { room: Room | null; onClo
 
             {/* Specs grid */}
             <div className="grid grid-cols-3 gap-3 text-center">
-              {([
-                [Users, "Guests", `${room.specs.maxGuests}`],
-                [Maximize, "Room Size", `${room.specs.sqm} sqm`],
-                [BedDouble, "Bed", room.specs.bedType],
-              ] as const).map(([Icon, label, value]) => (
-                <div key={label} className="card p-3">
-                  <Icon className="mx-auto text-gold" size={20} />
-                  <p className="mt-1.5 text-xs uppercase tracking-wide text-ink/55">{label}</p>
-                  <p className="mt-0.5 text-sm font-semibold text-forest">{value}</p>
-                </div>
-              ))}
+              <div className="card p-3">
+                <Users className="mx-auto text-gold" size={20} />
+                <p className="mt-1.5 text-xs uppercase tracking-wide text-ink/55">Guests</p>
+                <p className="mt-0.5 text-sm font-semibold text-forest">{room.specs.maxGuests} Guests</p>
+              </div>
+              <div className="card p-3">
+                <BedDouble className="mx-auto text-gold" size={20} />
+                <p className="mt-1.5 text-xs uppercase tracking-wide text-ink/55">Bed</p>
+                <p className="mt-0.5 text-sm font-semibold text-forest">{room.specs.bedType}</p>
+              </div>
+              <div className="card p-3">
+                {room.specs.cooling === "Air Conditioning" ? (
+                  <Snowflake className="mx-auto text-gold" size={20} />
+                ) : (
+                  <Fan className="mx-auto text-gold" size={20} />
+                )}
+                <p className="mt-1.5 text-xs uppercase tracking-wide text-ink/55">Cooling</p>
+                <p className="mt-0.5 text-sm font-semibold text-forest">{room.specs.cooling}</p>
+              </div>
             </div>
 
             {/* Amenities */}
@@ -163,7 +179,7 @@ export default function RoomDrawer({ room, onClose }: { room: Room | null; onClo
 
             {/* Policies */}
             <div className="rounded-xl bg-tint/60 p-4">
-              <h3 className="mb-2 font-serif text-lg">Policies</h3>
+              <h3 className="mb-2 font-serif text-lg">Lodge Policies</h3>
               <ul className="space-y-1.5 text-sm text-ink/70">
                 {room.policies.map((p) => (
                   <li key={p} className="flex gap-2">
@@ -178,20 +194,17 @@ export default function RoomDrawer({ room, onClose }: { room: Room | null; onClo
           {/* Sticky footer CTA */}
           <div className="sticky bottom-0 flex items-center justify-between gap-3 border-t border-line bg-white/95 p-4 backdrop-blur-sm">
             <div>
-              <p className="text-xs text-ink/55">Starting from</p>
-              <p className="font-serif text-xl text-forest">
-                GH₵ {room.pricePerNight}{" "}
-                <span className="font-sans text-sm font-normal text-ink/60">/ night</span>
-              </p>
+              <p className="text-xs text-ink/55">Selected Category</p>
+              <p className="font-serif text-lg font-bold text-forest">{room.title}</p>
             </div>
             {hasWhatsApp() && (
               <a
                 className="btn btn-gold"
                 target="_blank"
                 rel="noopener noreferrer"
-                href={whatsappUrl(`Hello Royal Solwezi Lodge, I would like to book the ${room.title}.`)}
+                href={whatsappUrl(`Hello Royal Solwezi Lodge, I would like to enquire about booking the ${room.title}.`)}
               >
-                <MessageCircle size={16} /> Book via WhatsApp
+                <MessageCircle size={16} /> Enquire on WhatsApp
               </a>
             )}
           </div>

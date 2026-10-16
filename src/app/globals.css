@@ -19,7 +19,9 @@ h1, h2, h3, h4 { @apply font-serif text-forest; }
 .btn-outline { @apply border border-forest/30 text-forest hover:bg-forest hover:text-white; }
 .btn-sm { @apply px-4 py-2 text-xs; }
 
-.field { @apply mt-1 w-full rounded-xl border border-line bg-cream px-3 py-2.5 text-forest transition-colors focus:border-gold focus:outline-none focus:ring-1 focus:ring-gold/40; }
+.field { @apply mt-1 w-full rounded-xl border border-line bg-cream px-3.5 py-2.5 text-forest placeholder:text-ink/40 transition-colors focus:border-gold focus:outline-none focus:ring-1 focus:ring-gold/40; }
+.field-with-icon { @apply !pl-11 !pr-3.5; }
+.field-textarea-with-icon { @apply !pl-11 !pr-3.5 !pt-3; }
 
 /* Decorative section divider */
 .section-divider { @apply my-1 flex items-center justify-center gap-3 text-gold; }

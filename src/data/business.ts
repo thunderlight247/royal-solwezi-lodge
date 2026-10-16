@@ -11,7 +11,8 @@ export const business = {
   },
   whatsapp: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "+233530470113",
   phone: process.env.NEXT_PUBLIC_PHONE || "+233530470113",
-  backupPhone: "+233530470113",
+  altPhone: "+233505367267",
+  backupPhone: "+233505367267",
   email: process.env.NEXT_PUBLIC_EMAIL || "royalsolwezilodge@gmail.com",
   googleMapsUrl: "https://share.google/7PYqCsIbSYz3xv1Vv",
   googleMapsEmbed: "https://www.google.com/maps?q=Royal+Solwezi+Lodge+Agona+Swedru+Ghana&output=embed",
@@ -23,8 +24,8 @@ export const business = {
     facebook: process.env.NEXT_PUBLIC_FACEBOOK_URL || "",
   },
   // Standard lodge policies (customizable by client)
-  checkIn: "2:00 PM",
-  checkOut: "11:00 AM",
+  checkIn: "12:00 PM",
+  checkOut: "2:00 PM",
   receptionHours: "Open 24/7",
 };
 

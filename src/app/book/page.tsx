@@ -37,7 +37,22 @@ export default async function Book({ searchParams }: { searchParams: Promise<{ r
             </p>
 
             <div className="mt-5 space-y-3">
-              {business.backupPhone && (
+              {business.phone && (
+                <a
+                  href={`tel:${business.phone}`}
+                  className="flex items-center gap-3 rounded-xl border border-line bg-cream/70 p-3 text-sm font-semibold text-forest transition-colors hover:border-gold hover:bg-white"
+                >
+                  <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-gold/20 text-forest">
+                    <Phone size={16} />
+                  </span>
+                  <div>
+                    <span className="block text-xs font-normal text-ink/50">Call Front Desk</span>
+                    {business.phone}
+                  </div>
+                </a>
+              )}
+
+              {business.backupPhone && business.backupPhone !== business.phone && (
                 <a
                   href={`tel:${business.backupPhone}`}
                   className="flex items-center gap-3 rounded-xl border border-line bg-cream/70 p-3 text-sm font-semibold text-forest transition-colors hover:border-gold hover:bg-white"
@@ -46,7 +61,7 @@ export default async function Book({ searchParams }: { searchParams: Promise<{ r
                     <Phone size={16} />
                   </span>
                   <div>
-                    <span className="block text-xs font-normal text-ink/50">Call Lodge Desk</span>
+                    <span className="block text-xs font-normal text-ink/50">Additional Line</span>
                     {business.backupPhone}
                   </div>
                 </a>
@@ -89,7 +104,7 @@ export default async function Book({ searchParams }: { searchParams: Promise<{ r
             <ul className="mt-4 space-y-2.5 text-sm text-white/90">
               <li className="flex items-start gap-2.5">
                 <ShieldCheck size={16} className="mt-0.5 shrink-0 text-gold" />
-                <span>Best available daily room rates</span>
+                <span>Direct access to current room availability &amp; rates</span>
               </li>
               <li className="flex items-start gap-2.5">
                 <Sparkles size={16} className="mt-0.5 shrink-0 text-gold" />

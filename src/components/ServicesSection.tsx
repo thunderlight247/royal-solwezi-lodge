@@ -1,4 +1,13 @@
-import { BedDouble, Coffee, PartyPopper, Presentation, Utensils, UsersRound } from "lucide-react";
+import {
+  BedDouble,
+  Coffee,
+  PartyPopper,
+  Presentation,
+  Utensils,
+  UsersRound,
+  Shirt,
+  Sun,
+} from "lucide-react";
 import Reveal from "./Reveal";
 import SectionHeader from "./SectionHeader";
 import { services } from "@/data/services";
@@ -10,6 +19,8 @@ const serviceIcons = {
   Presentation,
   Utensils,
   UsersRound,
+  Shirt,
+  Sun,
 };
 
 export default function ServicesSection() {
@@ -28,14 +39,15 @@ export default function ServicesSection() {
 
       <div className="relative mx-auto max-w-6xl">
         <SectionHeader
-          tag="Services"
-          title="Everything for a memorable stay"
-          intro="Rest, dine, celebrate or gather together at Royal Solwezi Lodge."
+          tag="Our Services"
+          title="Comfort, Dining, Gatherings &amp; Rest"
+          intro="Stay, dine, meet, or celebrate at Royal Solwezi Lodge in Agona Swedru."
           inverse
         />
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service, index) => {
-            const Icon = serviceIcons[service.icon as keyof typeof serviceIcons];
+            const Icon =
+              serviceIcons[service.icon as keyof typeof serviceIcons] || BedDouble;
             return (
               <Reveal key={service.name} delay={index * 0.06}>
                 <article className="group h-full rounded-2xl border border-white/10 bg-white/[0.05] p-6 transition-all duration-300 hover:border-gold/40 hover:bg-white/[0.09] hover:shadow-lg hover:shadow-black/20 sm:p-7">
@@ -43,7 +55,9 @@ export default function ServicesSection() {
                     <Icon size={26} strokeWidth={1.8} aria-hidden="true" />
                   </span>
                   <h3 className="mt-5 font-serif text-xl text-white">{service.name}</h3>
-                  <p className="mt-2 max-w-sm text-sm leading-relaxed text-white/70">{service.description}</p>
+                  <p className="mt-2 max-w-sm text-sm leading-relaxed text-white/70">
+                    {service.description}
+                  </p>
                 </article>
               </Reveal>
             );

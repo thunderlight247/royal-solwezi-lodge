@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, BedDouble, Utensils, Shield, MessageCircle } from "lucide-react";
+import { ArrowRight, BedDouble, Utensils, Shield, MessageCircle, Sun } from "lucide-react";
 import Hero from "@/components/Hero";
 import ServicesSection from "@/components/ServicesSection";
 import RoomsSection from "@/components/RoomsSection";
@@ -30,21 +30,24 @@ export default function Home() {
               A Welcoming Sanctuary in Agona Swedru
             </h2>
             <p className="mt-4 leading-relaxed text-ink/75">
-              Royal Solwezi Lodge brings together comfortable, well-appointed suites, breezy outdoor spaces, and delightful dining within a secure, gated compound near the Ekwamkrom Police Barrier.
+              Royal Solwezi Lodge offers seventeen comfortable rooms across Executive, Luxury (both air-conditioned), and Standard (fan-cooled) categories. Guests enjoy authentic Ghanaian dining from our bar and kitchen, a cool summer hut for daytime relaxation, an on-site conference room accommodating 30 to 40 people, an event center, and full laundry services within a secure, gated compound near the Ekwamkrom Police Barrier.
             </p>
 
             <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-3">
               <div className="rounded-xl bg-cream p-3 text-center border border-line">
                 <BedDouble size={20} className="mx-auto text-gold" />
-                <p className="mt-1 text-xs font-semibold text-forest">Air-Con Suites</p>
+                <p className="mt-1 text-xs font-semibold text-forest">17 Guest Rooms</p>
+                <p className="text-[11px] text-ink/60">AC &amp; Fan Options</p>
               </div>
               <div className="rounded-xl bg-cream p-3 text-center border border-line">
-                <Utensils size={20} className="mx-auto text-gold" />
-                <p className="mt-1 text-xs font-semibold text-forest">Pavilion Dining</p>
+                <Sun size={20} className="mx-auto text-gold" />
+                <p className="mt-1 text-xs font-semibold text-forest">Summer Hut</p>
+                <p className="text-[11px] text-ink/60">Rest &amp; Relaxation</p>
               </div>
               <div className="rounded-xl bg-cream p-3 text-center border border-line">
                 <Shield size={20} className="mx-auto text-gold" />
                 <p className="mt-1 text-xs font-semibold text-forest">Gated Security</p>
+                <p className="text-[11px] text-ink/60">24/7 Front Guard</p>
               </div>
             </div>
 
@@ -53,22 +56,22 @@ export default function Home() {
                 href="/about"
                 className="inline-flex items-center gap-2 font-semibold text-forest transition-colors hover:text-gold-deep"
               >
-                Learn more about our lodge <ArrowRight size={17} />
+                Learn more about our lodge &amp; facilities <ArrowRight size={17} />
               </Link>
             </div>
           </div>
 
           <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-xl">
             <SafeImage
-              src={media.gazebo}
-              alt="Serene garden gazebo at Royal Solwezi Lodge"
+              src={media.summerHut}
+              alt="Traditional summer hut at Royal Solwezi Lodge"
               sizes="(min-width: 768px) 50vw, 100vw"
               className="object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
             <div className="absolute bottom-4 left-4 right-4 text-white">
-              <p className="font-serif text-lg font-semibold">Garden Gazebo &amp; Greenery</p>
-              <p className="text-xs text-white/80">Quiet spots to relax, read, and converse.</p>
+              <p className="font-serif text-lg font-semibold">Summer Hut &amp; Open Pavilion</p>
+              <p className="text-xs text-white/80">Cool open-air spots to sit back, rest, converse, and unwind.</p>
             </div>
           </div>
         </div>
@@ -92,7 +95,7 @@ export default function Home() {
             Planning Your Stay in Agona Swedru?
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-base text-white/80">
-            Send us your preferred dates or order from the pavilion menu. Our team replies promptly on WhatsApp.
+            Send us your preferred dates or order from the kitchen and bar. Our team replies promptly on WhatsApp.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             <Link href="/book" className="btn btn-gold shadow-lg shadow-gold/20">

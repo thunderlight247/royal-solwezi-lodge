@@ -15,7 +15,7 @@ const faqs: FaqItem[] = [
   {
     question: "What are the standard check-in and check-out times?",
     answer:
-      "Standard check-in begins at 2:00 PM, and check-out is by 11:00 AM. If you require early check-in or late check-out, please message us on WhatsApp in advance and we will accommodate based on room availability.",
+      "Standard check-in begins at 12:00 PM (noon), and check-out is by 2:00 PM. If you require early check-in or late check-out, please message us on WhatsApp in advance and we will accommodate based on room availability.",
     category: "Stay & Rooms",
   },
   {
@@ -45,8 +45,20 @@ const faqs: FaqItem[] = [
   {
     question: "Can I host a conference, wedding, or celebration at the lodge?",
     answer:
-      "Yes. We offer an air-conditioned conference room for corporate meetings and executive sessions, as well as our open-air event center and pavilion for birthdays, family parties, and receptions.",
+      "Yes. We have a fully air-conditioned conference room that comfortably seats 30–40 people, ideal for corporate meetings, training sessions, and executive briefings. Our open-air event center and pavilion are also available for weddings, birthday celebrations, family gatherings, and receptions.",
     category: "Events & Meetings",
+  },
+  {
+    question: "Do you offer laundry services?",
+    answer:
+      "Yes. We provide on-site guest laundry services during your stay. Simply hand your items to the front desk and we will have them cleaned and returned to you promptly. Kindly make your request at the start of the day for same-day service.",
+    category: "Stay & Rooms",
+  },
+  {
+    question: "What is the Summer Hut?",
+    answer:
+      "The Summer Hut is our signature outdoor relaxation shelter — a shaded open-air retreat set within the lodge grounds where you can unwind, enjoy a cold drink, or simply take a break from the day in a calm, breezy atmosphere. It is open to both resident guests and day visitors.",
+    category: "Lodge Facilities",
   },
 ];
 

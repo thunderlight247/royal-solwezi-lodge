@@ -56,7 +56,7 @@ export default function Footer() {
                   </a>
                 </li>
               )}
-              {business.backupPhone && (
+              {business.backupPhone && business.backupPhone !== business.phone && (
                 <li>
                   <a href={`tel:${business.backupPhone}`} className="flex items-center gap-2.5 transition-colors hover:text-gold">
                     <Phone size={15} className="shrink-0 text-gold/70" /> {business.backupPhone}

@@ -3,8 +3,8 @@ import RoomsSection from "@/components/RoomsSection";
 import { PageHero } from "@/components/Section";
 
 export const metadata = pageMeta(
-  "Rooms & Suites in Agona Swedru",
-  "Rooms and suites at Royal Solwezi Lodge, Agona Swedru, Central Region, Ghana. Book via WhatsApp.",
+  "17 Rooms & Suites in Agona Swedru",
+  "Executive, Luxury and Standard rooms at Royal Solwezi Lodge, Agona Swedru, Central Region, Ghana. 17 rooms total. Book via WhatsApp.",
   "/rooms"
 );
 
@@ -12,9 +12,9 @@ export default function Rooms() {
   return (
     <>
       <PageHero
-        tag="Accommodation"
+        tag="17 Guest Rooms"
         title="Rooms &amp; Suites"
-        intro="Thoughtfully furnished rooms and suites designed for peaceful rest, complete with air conditioning, satellite TV, and attentive room service."
+        intro="Seventeen comfortable rooms categorized into Executive, Luxury (both air-conditioned), and Standard (fan-cooled) accommodations for peaceful rest in Agona Swedru."
       />
       <RoomsSection />
     </>
