@@ -18,8 +18,8 @@ export default function RoomsSection() {
     <section className="mx-auto max-w-6xl px-4 py-16" id="rooms">
       <SectionHeader
         tag="Accommodation"
-        title="17 Guest Rooms &amp; Suites"
-        intro={`Royal Solwezi Lodge features ${TOTAL_ROOMS_COUNT} rooms in total, divided into Executive, Luxury (both air-conditioned), and Standard (fan-cooled) categories.`}
+        title="17 Guest Rooms"
+        intro={`Royal Solwezi Lodge features ${TOTAL_ROOMS_COUNT} rooms in total, divided into Executive, Deluxe (both air-conditioned), and Standard (fan-cooled) categories.`}
       />
 
       <div className="grid gap-6 sm:grid-cols-2 md:gap-7 lg:grid-cols-3">

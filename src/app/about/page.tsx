@@ -18,7 +18,7 @@ import { PageHero } from "@/components/Section";
 
 export const metadata = pageMeta(
   "About Royal Solwezi Lodge",
-  "Discover Royal Solwezi Lodge in Agona Swedru, Central Region, Ghana — 17 rooms, outdoor summer hut, pavilion bar and kitchen, conference room for 30-40, and authentic hospitality.",
+  "Discover Royal Solwezi Lodge in Agona Swedru, Central Region, Ghana — 17 rooms, outdoor summer hut, kitchen and bar, conference room, and authentic hospitality.",
   "/about"
 );
 
@@ -27,13 +27,13 @@ const values = [
     icon: BedDouble,
     title: "17 Comfortable Rooms",
     description:
-      "Seventeen guest rooms across Executive, Luxury (both air-conditioned), and Standard (fan-cooled) categories to suit every traveler.",
+      "Seventeen guest rooms across Executive, Deluxe (both air-conditioned), and Standard (fan-cooled) categories to suit every traveler.",
   },
   {
     icon: UtensilsCrossed,
-    title: "Bar & Kitchen",
+    title: "Kitchen & Bar",
     description:
-      "Authentic Ghanaian cuisine, seasoned charcoal grills, fresh tilapia, and cold drinks served in our breezy open-air pavilion.",
+      "Authentic Ghanaian cuisine, seasoned charcoal grills, fresh tilapia, and cold drinks served from our on-site kitchen and bar.",
   },
   {
     icon: Presentation,
@@ -84,7 +84,7 @@ export default function About() {
               Situated near the Ekwamkrom Police Barrier in Agona Swedru, <strong className="text-forest">{business.name}</strong> was established to provide travelers, local families, and corporate organizations with a welcoming, reliable destination.
             </p>
             <p className="leading-relaxed text-ink/75">
-              With <strong>17 rooms in total</strong> — featuring air-conditioned Executive and Luxury rooms alongside fan-cooled Standard rooms — every guest finds quiet comfort. Our lodge also includes a fully licensed bar and kitchen, an open-air summer hut to unwind, a conference hall accommodating <strong>30 to 40 people</strong>, a vibrant event center, and on-site laundry services.
+              With <strong>17 rooms in total</strong> — featuring air-conditioned Executive and Deluxe rooms alongside fan-cooled Standard rooms — every guest finds quiet comfort. Our lodge also includes a fully licensed bar and kitchen, an open-air summer hut to unwind, a conference hall, a vibrant event center, and on-site laundry services.
             </p>
             <div className="flex items-center gap-2 text-sm font-semibold text-forest">
               <MapPin size={17} className="text-gold" />
@@ -139,14 +139,14 @@ export default function About() {
         <div className="mx-auto max-w-3xl">
           <h2 className="font-serif text-3xl text-white sm:text-4xl">Experience Royal Solwezi Lodge</h2>
           <p className="mt-3 text-white/80 leading-relaxed">
-            Whether for an overnight stay, a 30–40 person seminar, or a weekend meal at our pavilion, we look forward to hosting you.
+            Whether for an overnight stay, a group meeting, or an event on our compound, we look forward to hosting you.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <Link href="/book" className="btn btn-gold">
               Reserve Your Stay
             </Link>
-            <Link href="/menu" className="btn btn-line">
-              Explore Ghanaian Menu <ArrowRight size={16} />
+            <Link href="/rooms" className="btn btn-line">
+              Explore Rooms <ArrowRight size={16} />
             </Link>
           </div>
         </div>

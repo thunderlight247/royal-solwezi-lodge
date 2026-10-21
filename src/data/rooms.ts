@@ -43,7 +43,7 @@ export const rooms: Room[] = [
     tagline: "Air-conditioned comfort with modern appointments",
     coolingType: "Air Conditioned",
     description:
-      "A calm, fully air-conditioned room featuring a comfortable queen-size bed, satellite television, work desk, and private en-suite bathroom for a restful stay in Agona Swedru.",
+      "A calm, fully air-conditioned room featuring a comfortable bed, satellite television, work desk, and private bathroom for a restful stay in Agona Swedru.",
     images: media.rooms.executive,
     specs: { maxGuests: 2, bedType: "Queen Bed", cooling: "Air Conditioning" },
     amenities: [
@@ -53,21 +53,21 @@ export const rooms: Room[] = [
     ],
     features: [
       "Individual climate control (AC)",
-      "Private en-suite bathroom",
+      "Private bathroom",
       "Writing desk & chair",
       "Electric tea/coffee kettle",
     ],
     policies,
   },
   {
-    id: "luxury",
-    slug: "luxury-room",
-    title: "Luxury Room",
+    id: "deluxe",
+    slug: "deluxe-room",
+    title: "Deluxe Room",
     tagline: "Spacious premium room with air conditioning & lounge space",
     coolingType: "Air Conditioned",
     description:
-      "Our most generous room category, fully air-conditioned with a plush king bed, private seating area, smart TV, minibar, and upgraded bathroom amenities.",
-    images: media.rooms.luxury,
+      "Our generous Deluxe room category, fully air-conditioned with a plush bed, comfortable lounge armchair, smart TV, and upgraded bathroom amenities.",
+    images: media.rooms.deluxe,
     specs: { maxGuests: 2, bedType: "King Bed", cooling: "Air Conditioning" },
     amenities: [
       { iconName: "Snowflake", label: "Air Conditioning" },
@@ -78,10 +78,10 @@ export const rooms: Room[] = [
     ],
     features: [
       "Individual climate control (AC)",
-      "Separate seating & relaxation area",
-      "Private en-suite bathroom",
+      "Comfortable armchair & relaxation corner",
+      "Private bathroom",
       "Minibar refrigerator",
-      "Work desk & dressing mirror",
+      "Wardrobe & dressing mirror",
     ],
     policies,
   },

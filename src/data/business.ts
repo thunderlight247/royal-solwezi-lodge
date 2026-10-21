@@ -34,7 +34,7 @@ export const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://royal-solwez
 export const nav = [
   { href: "/", label: "Home" },
   { href: "/rooms", label: "Rooms" },
-  { href: "/menu", label: "Menu" },
+  // { href: "/menu", label: "Menu" }, // Commented out until menu updates are ready
   { href: "/amenities", label: "Amenities" },
   { href: "/gallery", label: "Gallery" },
   { href: "/contact", label: "Contact" },

@@ -10,7 +10,6 @@ const box: Variants = { hidden: {}, show: { transition: { delayChildren: 0.12, s
 const item: Variants = { hidden: { opacity: 0, y: 18 }, show: { opacity: 1, y: 0, transition: entrance } };
 
 export default function Hero() {
-  const reduce = useReducedMotion();
   return (
     <section className="relative isolate flex min-h-[82svh] flex-col items-center text-white md:min-h-[88vh] md:items-end">
       <SafeImage src={media.hero} alt="Royal Solwezi Lodge, a serene lodge in Agona Swedru" sizes="100vw" priority className="-z-10 object-cover" />
@@ -23,7 +22,7 @@ export default function Hero() {
 
       <motion.div
         variants={box}
-        initial={reduce ? "show" : "hidden"}
+        initial="hidden"
         animate="show"
         className="mx-auto flex w-full max-w-6xl flex-1 flex-col justify-end px-5 py-14 text-center md:px-6 md:pb-16 md:text-left"
       >
@@ -32,16 +31,16 @@ export default function Hero() {
         </motion.p>
 
         <motion.h1 variants={item} className="mx-auto mt-5 max-w-3xl font-serif text-4xl leading-[1.06] text-white drop-shadow-sm md:mx-0 md:text-6xl lg:text-7xl">
-          Serene Lodging, Summer Hut &amp; Pavilion Dining
+          Serene Lodging &amp; Summer Hut Relaxation
         </motion.h1>
 
         <motion.p variants={item} className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-white/90 drop-shadow-sm md:mx-0 md:text-lg">
-          Seventeen comfortable rooms (Executive, Luxury &amp; Standard), authentic Ghanaian cuisine, conference room for 30–40, laundry service, and a relaxing summer hut.
+          Seventeen comfortable rooms (Executive, Deluxe &amp; Standard), conference room, laundry service, and a relaxing summer hut on our secure compound.
         </motion.p>
 
         <motion.div variants={item} className="mt-8 flex flex-wrap justify-center gap-3 md:justify-start">
           <Link href="/book" className="btn btn-gold shadow-lg shadow-gold/20">Reserve Your Room</Link>
-          <Link href="/menu" className="btn btn-line">Explore Ghanaian Menu</Link>
+          <Link href="/rooms" className="btn btn-line">Explore Rooms</Link>
         </motion.div>
 
         {/* Trust signals */}
@@ -61,21 +60,19 @@ export default function Hero() {
       </motion.div>
 
       {/* Scroll indicator */}
-      {!reduce && (
+      <motion.div
+        initial={{ opacity: 0, y: -8 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 1.2, duration: 0.5 }}
+        className="absolute bottom-6 left-1/2 -translate-x-1/2"
+      >
         <motion.div
-          initial={{ opacity: 0, y: -8 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.2, duration: 0.5 }}
-          className="absolute bottom-6 left-1/2 -translate-x-1/2"
+          animate={{ y: [0, 6, 0] }}
+          transition={{ repeat: Infinity, duration: 1.6, ease: "easeInOut" }}
         >
-          <motion.div
-            animate={{ y: [0, 6, 0] }}
-            transition={{ repeat: Infinity, duration: 1.6, ease: "easeInOut" }}
-          >
-            <ChevronDown size={28} className="text-white/60" strokeWidth={1.5} />
-          </motion.div>
+          <ChevronDown size={28} className="text-white/60" strokeWidth={1.5} />
         </motion.div>
-      )}
+      </motion.div>
     </section>
   );
 }

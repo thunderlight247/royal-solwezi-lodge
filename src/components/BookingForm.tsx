@@ -77,7 +77,7 @@ export default function BookingForm({ defaultRoom = "" }: { defaultRoom?: string
         </span>
         <h2 className="mt-3 font-serif text-3xl text-forest">Reserve Your Stay</h2>
         <p className="mt-1 text-sm text-ink/70">
-          Choose from our 17 rooms (Executive, Luxury, or Standard). Enquiries are sent directly to WhatsApp for rapid confirmation.
+          Choose from our 17 rooms (Executive, Deluxe, or Standard). Enquiries are sent directly to WhatsApp for rapid confirmation.
         </p>
       </div>
 

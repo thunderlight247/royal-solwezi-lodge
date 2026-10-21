@@ -19,7 +19,7 @@ export default function ContactPage() {
       <PageHero
         tag="Get In Touch"
         title="Contact Us"
-        intro="Have questions about availability, pavilion reservations, or events? Reach out to our front desk team."
+        intro="Have questions about availability, room reservations, or events? Reach out to our front desk team."
       />
 
       <div className="mx-auto max-w-6xl px-4 py-16">

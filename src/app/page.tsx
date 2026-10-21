@@ -17,7 +17,8 @@ export default function Home() {
       <Hero />
       <ServicesSection />
       <RoomsSection />
-      <MenuSection />
+      {/* Menu section temporarily commented out until client supplies real food photos and finalized dishes */}
+      {/* <MenuSection /> */}
 
       {/* About the Lodge Featurette */}
       <section className="border-y border-line bg-white px-4 py-16 md:py-20">
@@ -30,7 +31,7 @@ export default function Home() {
               A Welcoming Sanctuary in Agona Swedru
             </h2>
             <p className="mt-4 leading-relaxed text-ink/75">
-              Royal Solwezi Lodge offers seventeen comfortable rooms across Executive, Luxury (both air-conditioned), and Standard (fan-cooled) categories. Guests enjoy authentic Ghanaian dining from our bar and kitchen, a cool summer hut for daytime relaxation, an on-site conference room accommodating 30 to 40 people, an event center, and full laundry services within a secure, gated compound near the Ekwamkrom Police Barrier.
+              Royal Solwezi Lodge offers seventeen comfortable rooms across Executive, Deluxe (both air-conditioned), and Standard (fan-cooled) categories. Guests enjoy authentic Ghanaian dining from our bar and kitchen, a cool summer hut for daytime relaxation, an on-site conference room accommodating 30 to 40 people, an event center, and full laundry services within a secure, gated compound near the Ekwamkrom Police Barrier.
             </p>
 
             <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-3">
@@ -70,7 +71,7 @@ export default function Home() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
             <div className="absolute bottom-4 left-4 right-4 text-white">
-              <p className="font-serif text-lg font-semibold">Summer Hut &amp; Open Pavilion</p>
+              <p className="font-serif text-lg font-semibold">Summer Hut &amp; Relaxation Space</p>
               <p className="text-xs text-white/80">Cool open-air spots to sit back, rest, converse, and unwind.</p>
             </div>
           </div>

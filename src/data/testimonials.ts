@@ -12,7 +12,7 @@ export interface Testimonial {
 // Example format:
 // {
 //   name: "Kofi Owusu",
-//   quote: "The pavilion was so serene for an evening meal, and the room was exceptionally clean with great air-conditioning.",
+//   quote: "The summer hut was so serene for an evening rest, and the room was exceptionally clean with great air-conditioning.",
 //   rating: 5,
 //   source: "Google Review"
 // }

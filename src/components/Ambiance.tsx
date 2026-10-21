@@ -10,7 +10,7 @@ export default function Ambiance() {
         <SectionHeader
           tag="Ambiance"
           title="Relax in the Open Air"
-          intro="An open-air pavilion, a licensed bar and kitchen, a cool summer hut, and an on-site conference room, all within our secure compound."
+          intro="A licensed kitchen and bar, a cool summer hut for daytime rest, and an on-site conference room, all within our secure compound."
         />
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {amenities.slice(0, 4).map((a, i) => {

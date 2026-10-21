@@ -25,9 +25,9 @@ const faqs: FaqItem[] = [
     category: "Lodge Facilities",
   },
   {
-    question: "Is the Pavilion Restaurant and Bar open to non-lodging guests?",
+    question: "Is the Kitchen and Bar open to non-lodging guests?",
     answer:
-      "Absolutely! Our open-air pavilion restaurant and licensed bar welcome walk-in visitors and diners from Agona Swedru and neighboring areas for breakfast, local specialties, charcoal grills, and evening drinks.",
+      "Absolutely! Our on-site kitchen and licensed bar welcome walk-in visitors and diners from Agona Swedru and neighboring areas for breakfast, local specialties, charcoal grills, and evening drinks.",
     category: "Dining & Bar",
   },
   {
@@ -45,7 +45,7 @@ const faqs: FaqItem[] = [
   {
     question: "Can I host a conference, wedding, or celebration at the lodge?",
     answer:
-      "Yes. We have a fully air-conditioned conference room that comfortably seats 30–40 people, ideal for corporate meetings, training sessions, and executive briefings. Our open-air event center and pavilion are also available for weddings, birthday celebrations, family gatherings, and receptions.",
+      "Yes. We have a fully air-conditioned conference room that comfortably seats 30–40 people, ideal for corporate meetings, training sessions, and executive briefings. Our open-air event center and compound grounds are also available for weddings, birthday celebrations, family gatherings, and receptions.",
     category: "Events & Meetings",
   },
   {

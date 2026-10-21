@@ -1,14 +1,15 @@
-import { media } from "./media";
-
-const g = media.gallery;
-
 export const gallery = [
-  { cat: "Compound", src: g[0], alt: "Lodge gated compound and entrance" },
-  { cat: "Summer Hut", src: g[1], alt: "Summer hut open-air resting area" },
-  { cat: "Pavilion & Bar", src: g[2], alt: "Open-air pavilion dining and relaxation" },
-  { cat: "Conference & Events", src: g[3], alt: "Air-conditioned conference room for 30-40 attendees" },
-  { cat: "Rooms", src: g[4], alt: "Executive Room with air conditioning" },
-  { cat: "Rooms", src: g[5], alt: "Luxury Room with air conditioning and seating" },
-  { cat: "Rooms", src: g[6], alt: "Standard Room with ceiling fan cooling" },
-  { cat: "Pavilion & Bar", src: g[7], alt: "Lodge bar and kitchen counter" },
+  { cat: "Summer Hut", src: "/images/exterior/exterior-2.jpeg", alt: "Summer Hut outdoor relaxation area and grounds" },
+  { cat: "Compound", src: "/images/exterior/exterior-1.jpeg", alt: "Royal Solwezi Lodge main compound and building" },
+  { cat: "Compound", src: "/images/exterior/exterior-3.jpeg", alt: "Lodge grounds and outdoor seating structure" },
+  { cat: "Compound", src: "/images/exterior/exterior-4.jpeg", alt: "Lodge chalet exterior view" },
+  { cat: "Interior", src: "/images/interior/lobby-stairs.jpeg", alt: "Grand interior spiral staircase and lobby hallway" },
+  { cat: "Facilities", src: "/images/facilities/conference.jpeg", alt: "Conference room with projection screen and seating" },
+  { cat: "Facilities", src: "/images/facilities/ironing.jpeg", alt: "Dedicated guest laundry and ironing space" },
+  { cat: "Rooms", src: "/images/rooms/executive-1.jpeg", alt: "Executive Room with air conditioning" },
+  { cat: "Rooms", src: "/images/rooms/executive-2.jpeg", alt: "Executive Room comfortable bed view" },
+  { cat: "Rooms", src: "/images/rooms/deluxe-1.jpeg", alt: "Deluxe Room with air conditioning" },
+  { cat: "Rooms", src: "/images/rooms/deluxe-2.jpeg", alt: "Deluxe Room air conditioned comfort" },
+  { cat: "Rooms", src: "/images/rooms/standard-1.jpeg", alt: "Standard Room with ceiling fan" },
+  { cat: "Rooms", src: "/images/rooms/standard-2.jpeg", alt: "Standard Room comfortable bed and decor" },
 ];

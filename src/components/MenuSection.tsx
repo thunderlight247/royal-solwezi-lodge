@@ -13,7 +13,7 @@ export default function MenuSection() {
   return (
     <section className="mx-auto max-w-6xl px-4 py-16" id="menu">
       <SectionHeader
-        tag="Pavilion Kitchen &amp; Bar"
+        tag="Kitchen &amp; Bar"
         title="Authentic Ghanaian Cuisine &amp; Drinks"
         intro="Order directly via WhatsApp from our kitchen and bar. We serve authentic local Ghanaian dishes, charcoal grills, and cold beverages."
       />
