@@ -74,7 +74,7 @@ export const metadata: Metadata = {
     apple: "/logo.jpg",
   },
   verification: {
-    google: "uFgT0u1xAW_zrWko5ChcvaCixaB33ZX5OpQclkNiKsE",
+    google: "GjEZwEuaUdlCm7EfFKzPTiKtPqyb4CtclzSn7Vse5C0",
   },
 };
 
