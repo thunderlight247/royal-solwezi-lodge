@@ -29,7 +29,7 @@ export const business = {
   receptionHours: "Open 24/7",
 };
 
-export const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://royal-solwezi-lodge.vercel.app";
+export const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://royalsolwezilodge.com";
 
 export const nav = [
   { href: "/", label: "Home" },
