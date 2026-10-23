@@ -102,6 +102,9 @@ export default function Footer() {
         <p className="text-center text-xs text-white/35">
           © {new Date().getFullYear()} {business.name}, {l.city}, Ghana. All rights reserved.
         </p>
+        <p className="mt-2 text-center text-xs text-white/35">
+          Developed by Light
+        </p>
       </div>
     </footer>
   );
