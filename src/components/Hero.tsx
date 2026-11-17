@@ -15,7 +15,7 @@ export default function Hero() {
       <SafeImage src={media.hero} alt="Royal Solwezi Lodge, a serene lodge in Agona Swedru" sizes="100vw" priority className="-z-10 object-cover" />
 
       {/* Multi-stop gradient for better text legibility */}
-      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-black/30 via-black/15 to-black/75 md:bg-gradient-to-t md:from-black/80 md:via-black/30 md:to-black/15" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-black/40 via-black/25 to-black/80 md:bg-gradient-to-t md:from-black/85 md:via-black/40 md:to-black/20" />
 
       {/* Subtle vignette on sides */}
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,transparent_50%,rgba(0,0,0,0.35)_100%)]" />
@@ -34,8 +34,10 @@ export default function Hero() {
           Serene Lodging &amp; Summer Hut Relaxation
         </motion.h1>
 
-        <motion.p variants={item} className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-white/90 drop-shadow-sm md:mx-0 md:text-lg">
-          Seventeen comfortable rooms (Executive, Deluxe &amp; Standard), conference room, laundry service, and a relaxing summer hut on our secure compound.
+        <motion.p variants={item} className="mx-auto mt-5 max-w-xl text-base leading-relaxed md:mx-0 md:text-lg">
+          <span className="rounded-lg bg-black/50 px-3 py-1.5 text-white shadow-sm backdrop-blur-sm drop-shadow">
+            Seventeen comfortable rooms (Executive, Deluxe &amp; Standard), conference room, laundry service, and a relaxing summer hut on our secure compound.
+          </span>
         </motion.p>
 
         <motion.div variants={item} className="mt-8 flex flex-wrap justify-center gap-3 md:justify-start">
@@ -48,7 +50,7 @@ export default function Hero() {
           {[
             ["17", "Guest Rooms"],
             ["3", "Categories (AC & Fan)"],
-            ["30–40", "Conference Hall"],
+            ["30–40", "Conference Room"],
             ["📍", "Agona Swedru"],
           ].map(([value, label]) => (
             <div key={label} className="flex items-center gap-2">
