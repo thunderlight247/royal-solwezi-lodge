@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { PortableText } from '@portabletext/react'
 import { getPostBySlug, getAllPostSlugs } from '@/lib/queries'
 import { portableTextComponents } from '@/components/blog/PortableTextComponents'
+import RelatedPosts from '@/components/blog/RelatedPosts'
 import { urlFor } from '@/sanity/image'
 import { business, siteUrl } from '@/data/business'
 import type { Metadata } from 'next'
@@ -152,13 +153,14 @@ export default async function BlogPostPage({ params }: Props) {
           {post.categories && post.categories.length > 0 && (
             <div className="flex flex-wrap gap-2 mb-4">
               {post.categories.map((cat: string) => (
-                <span
+                <Link
                   key={cat}
-                  className="inline-flex items-center gap-1 text-xs font-medium text-amber-700 bg-amber-50 px-2.5 py-1 rounded-full"
+                  href={`/blog/category/${encodeURIComponent(cat)}`}
+                  className="inline-flex items-center gap-1 text-xs font-medium text-amber-700 bg-amber-50 hover:bg-amber-100 px-2.5 py-1 rounded-full transition-colors"
                 >
                   <Tag size={10} />
                   {cat}
-                </span>
+                </Link>
               ))}
             </div>
           )}
@@ -192,6 +194,24 @@ export default async function BlogPostPage({ params }: Props) {
           ) : (
             <p className="text-stone-500 italic">No content yet.</p>
           )}
+
+          {/* Tags */}
+          {post.tags && post.tags.length > 0 && (
+            <div className="flex flex-wrap gap-2 mt-10 pt-6 border-t border-stone-100">
+              <span className="text-xs text-stone-400 font-medium self-center mr-1">Tags:</span>
+              {post.tags.map((tag: string) => (
+                <span
+                  key={tag}
+                  className="text-xs text-stone-500 bg-stone-100 px-2.5 py-1 rounded-full"
+                >
+                  #{tag}
+                </span>
+              ))}
+            </div>
+          )}
+
+          {/* Related Posts */}
+          <RelatedPosts posts={post.relatedPosts ?? []} />
 
           {/* Footer CTA */}
           <div className="mt-16 p-6 bg-amber-50 rounded-2xl text-center border border-amber-100">

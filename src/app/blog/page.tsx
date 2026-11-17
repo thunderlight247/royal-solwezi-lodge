@@ -1,7 +1,8 @@
-import { getAllPosts } from '@/lib/queries'
+import { getAllPosts, getAllCategories } from '@/lib/queries'
 import { pageMeta } from '@/lib/metadata'
 import PostCard from '@/components/blog/PostCard'
-import { BookOpen } from 'lucide-react'
+import { BookOpen, Tag } from 'lucide-react'
+import Link from 'next/link'
 
 type Post = {
   _id: string
@@ -29,13 +30,14 @@ export const metadata = pageMeta(
   }
 )
 
-export const revalidate = 60 // Revalidate every 60 seconds
+export const revalidate = 60
 
 export default async function BlogPage() {
   let posts: Post[] = []
+  let categories: string[] = []
 
   try {
-    posts = await getAllPosts()
+    ;[posts, categories] = await Promise.all([getAllPosts(), getAllCategories()])
   } catch {
     // Sanity not configured yet — show empty state
   }
@@ -52,10 +54,34 @@ export default async function BlogPage() {
             Our Blog
           </h1>
           <p className="text-stone-300 text-lg max-w-xl mx-auto">
-            Stories, tips & news from Royal Solwezi Lodge — your home away from home in Agona Swedru.
+            Stories, tips &amp; news from Royal Solwezi Lodge — your home away from home in Agona Swedru.
           </p>
         </div>
       </section>
+
+      {/* Category Filter */}
+      {categories.length > 0 && (
+        <section className="bg-white border-b border-stone-100 sticky top-0 z-10 shadow-sm">
+          <div className="max-w-6xl mx-auto px-4 py-3 flex items-center gap-2 overflow-x-auto scrollbar-none">
+            <Link
+              href="/blog"
+              className="flex-shrink-0 inline-flex items-center gap-1.5 text-sm font-medium bg-amber-600 text-white px-4 py-1.5 rounded-full"
+            >
+              All
+            </Link>
+            {categories.map((cat) => (
+              <Link
+                key={cat}
+                href={`/blog/category/${encodeURIComponent(cat)}`}
+                className="flex-shrink-0 inline-flex items-center gap-1.5 text-sm font-medium text-stone-600 bg-stone-100 hover:bg-amber-50 hover:text-amber-700 px-4 py-1.5 rounded-full transition-colors"
+              >
+                <Tag size={11} />
+                {cat}
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* Posts Grid */}
       <section className="max-w-6xl mx-auto px-4 py-16">

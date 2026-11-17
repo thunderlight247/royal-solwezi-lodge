@@ -99,6 +99,22 @@ export default defineType({
       initialValue: false,
     }),
     defineField({
+      name: 'tags',
+      title: 'Tags',
+      type: 'array',
+      of: [{ type: 'string' }],
+      options: { layout: 'tags' },
+      description: 'Fine-grained labels e.g. "Cape Coast", "Road Trip", "Food"',
+    }),
+    defineField({
+      name: 'relatedPosts',
+      title: 'Related Posts',
+      type: 'array',
+      of: [{ type: 'reference', to: [{ type: 'post' }] }],
+      validation: (Rule) => Rule.max(3),
+      description: 'Pick up to 3 posts to show at the bottom of this article',
+    }),
+    defineField({
       name: 'seoTitle',
       title: 'SEO Title',
       type: 'string',
