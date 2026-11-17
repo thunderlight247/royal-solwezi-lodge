@@ -43,8 +43,8 @@ export default function JsonLd() {
       longitude: -0.7000,
     },
     hasMap: business.googleMapsUrl,
-    checkinTime: "12:00:00",
-    checkoutTime: "14:00:00",
+    checkinTime: "13:00:00",
+    checkoutTime: "12:00:00",
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",

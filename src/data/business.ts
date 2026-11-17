@@ -24,8 +24,8 @@ export const business = {
     facebook: process.env.NEXT_PUBLIC_FACEBOOK_URL || "",
   },
   // Standard lodge policies (customizable by client)
-  checkIn: "12:00 PM",
-  checkOut: "2:00 PM",
+  checkIn: "1:00 PM",
+  checkOut: "12:00 PM",
   receptionHours: "Open 24/7",
 };
 

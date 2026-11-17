@@ -15,7 +15,7 @@ const faqs: FaqItem[] = [
   {
     question: "What are the standard check-in and check-out times?",
     answer:
-      "Standard check-in begins at 12:00 PM (noon), and check-out is by 2:00 PM. If you require early check-in or late check-out, please message us on WhatsApp in advance and we will accommodate based on room availability.",
+      "Standard check-in begins at 1:00 PM, and check-out is by 12:00 PM (noon). If you require early check-in or late check-out, please message us on WhatsApp in advance and we will accommodate based on room availability.",
     category: "Stay & Rooms",
   },
   {
